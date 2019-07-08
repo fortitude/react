@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/macro';
 import { em, padding, borderRadius, borderWidth } from 'polished';
 
-export interface Props {
+export interface BadgeProps {
   borderWidth?: number | null;
   intent?:
     | 'primary'
@@ -15,7 +15,7 @@ export interface Props {
   variant?: 'rounded' | 'rectangle' | 'rounded-rectangle' | null;
 }
 
-const intent = css<Props>(({ intent, theme }) => {
+const intent = css<BadgeProps>(({ intent, theme }) => {
   if (
     intent === 'primary' ||
     intent === 'danger' ||
@@ -68,7 +68,7 @@ const getBoxModel = (
   };
 };
 
-const size = css<Props>(({ size, theme, borderWidth }) => {
+const size = css<BadgeProps>(({ size, theme, borderWidth }) => {
   if (size === 'small')
     return getBoxModel(
       theme.base.fontSize,
@@ -103,7 +103,7 @@ const size = css<Props>(({ size, theme, borderWidth }) => {
     );
 });
 
-const variant = css<Props>(({ variant, theme, size }) => {
+const variant = css<BadgeProps>(({ variant, theme, size }) => {
   if (variant === 'rounded')
     return {
       borderRadius: '25% / 100%'
@@ -113,7 +113,7 @@ const variant = css<Props>(({ variant, theme, size }) => {
   else return {};
 });
 
-export const Badge = styled.span<Props>`
+export const Badge = styled.span<BadgeProps>`
   border-style: solid;
   box-sizing: border-box;
   display: inline-block;
