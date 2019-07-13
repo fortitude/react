@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { select, text, number } from '@storybook/addon-knobs';
-import { Badge } from './';
+import { Badge } from '.';
 
 function useKnobs() {
   const borderWidth = number('BorderWidth', 0);

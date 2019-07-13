@@ -106,7 +106,7 @@ const size = css<BadgeProps>(({ size, theme, borderWidth }) => {
 const variant = css<BadgeProps>(({ variant, theme, size }) => {
   if (variant === 'rounded')
     return {
-      borderRadius: '25% / 100%'
+      borderRadius: em(100)
     };
   else if (variant === 'rounded-rectangle')
     return { borderRadius: em(theme.base.borderRadius) };

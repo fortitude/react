@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { BareList } from './';
+import { BareList } from '.';
 
 storiesOf('Components|BareList', module).add('default', () => {
   return (
